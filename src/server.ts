@@ -5,10 +5,6 @@ const app = express();
 
 app.use(express.json());
 
-app.use(categoriesRoutes);
-
-// app.get("/", (request, response) => {
-//     return response.json({ message: "Hello World" });
-// });
+app.use("/categories", categoriesRoutes);
 
 app.listen(3333, () => console.log("Server running. 🚀"));
